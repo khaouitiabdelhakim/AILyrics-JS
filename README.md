@@ -1,5 +1,5 @@
 # AI-Lyrics
-![alt text](https://github.com/khaouitiabdelhakim/LyricsAI-JS/blob/master/LyricsAI.png)
+![alt text](https://github.com/khaouitiabdelhakim/AILyrics-JS/blob/main/LyricsAI.png)
 
 ## Description
 
