@@ -4,7 +4,6 @@
   "author": "KHAOUITI ABDELHAKIM",
   "version": "1.0.0",
   "license": "MIT",
-   "version": "1.0.0",
   "main": "index.js",
   "dependencies": {
     "html-to-text": "^9.0.5",
