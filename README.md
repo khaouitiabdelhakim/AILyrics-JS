@@ -1,4 +1,5 @@
-# ai-lyrics
+# AI-Lyrics
+![alt text](https://github.com/khaouitiabdelhakim/LyricsAI-JS/blob/master/LyricsAI.png)
 
 ## Description
 
