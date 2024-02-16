@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/khaouitiabdelhakim/AILyrics-JS.git"
+    "url": "git+https://github.com/khaouitiabdelhakim/AILyrics-JS.git"
   },
   "keywords": [
     "lyrics",
