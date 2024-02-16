@@ -70,7 +70,6 @@ Running this example will log the lyrics of the song "Lily" by Alan Walker.
 ## Notes
 
 - Make sure you have Node.js installed on your system.
-- Ensure that Puppeteer is installed as a dependency (`npm install puppeteer`) since `ai-lyrics` utilizes Puppeteer for web scraping.
 - Please be aware of web scraping regulations and respect the terms of service of the websites from which you are scraping lyrics.
 
 ## License
