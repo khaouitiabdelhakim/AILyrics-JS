@@ -49,49 +49,7 @@ Lily was a little girl
 Afraid of the big, wide world
 She grew up within her castle walls
 Now and then, she tried to run
-And then on a night with the setting sun     
-She went in the woods away
-So afraid, all alone
-They warned her, don't go there
-There's creatures who are hidin' in the dark 
-Then somethin' came creepin'
-It told her, "Don't you worry, " just        
-Follow everywhere I go
-Top of all the mountains or valley low       
-Give you everything you've been dreamin' of  
-Just let me in, ooh
-Everything you want in gold
-I'll be the magic story you've been told     
-And you'll be safe under my control
-Just let me in, ooh
-Just let me in, ooh
-She knew she was hypnotized
-And walking on cold, thin ice
-Then it broke, and she awoke again
-Then she ran faster and
-Start screamin', "Is there someone out there?
-Please help me, come get me"
-Behind her, she can hear it say
-Follow everywhere I go
-Top of all the mountains or valley low
-Give you everything you've been dreamin' of
-Just let me in, ooh
-Everything you want in gold
-I'll be the magic story you've been told
-And you'll be safe under my control
-Just let me in, ooh
-Just let me in, ooh
-Everything you want in gold
-I'll be the magic story you've been told
-And you'll be safe under my control
-Just let me in, ooh
-Follow everywhere I go
-Top of all the mountains or valley low
-Give you everything you've been dreamin' of
-Just let me in, ooh
-Then she ran faster and
-Start screamin', "Is there someone out there?
-Please help me"
+...
 Just let me in, ooh
 ```
 
