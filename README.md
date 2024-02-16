@@ -59,9 +59,6 @@ Just let me in, ooh
 - Make sure you have Node.js installed on your system.
 - Please be aware of web scraping regulations and respect the terms of service of the websites from which you are scraping lyrics.
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## Author
 
