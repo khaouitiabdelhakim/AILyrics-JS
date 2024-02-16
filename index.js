@@ -4,7 +4,7 @@
  * 
  * Credits:
  * Author: KHAOUITI ABDELHAKIM
- * Repository: https://github.com/example/ai-lyrics
+ * Repository: https://github.com/khaouitiabdelhakim/AILyrics-JS
  * 
  * Copyright:
  * Copyright (c) [Year], KHAOUITI ABDELHAKIM

@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/example/ai-lyrics.git"
+    "url": "https://github.com/khaouitiabdelhakim/AILyrics-JS.git"
   },
   "keywords": [
     "lyrics",
@@ -23,7 +23,7 @@
     "node": ">=12.0.0"
   },
   "bugs": {
-    "url": "https://github.com/example/ai-lyrics/issues"
+    "url": "https://github.com/khaouitiabdelhakim/AILyrics-JS/issues"
   },
-  "homepage": "https://github.com/example/ai-lyrics#readme"
+  "homepage": "https://github.com/khaouitiabdelhakim/AILyrics-JS#readme"
 }
