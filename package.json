@@ -1,0 +1,29 @@
+{
+  "name": "ai-lyrics",
+  "description": "A JavaScript library that allows you to fetch song lyrics by title or title and artist name.",
+  "author": "KHAOUITI ABDELHAKIM",
+  "license": "MIT",
+  "main": "index.js",
+  "dependencies": {
+    "html-to-text": "^9.0.5",
+    "puppeteer": "^22.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/example/ai-lyrics.git"
+  },
+  "keywords": [
+    "lyrics",
+    "music",
+    "fetch",
+    "songs",
+    "javascript"
+  ],
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/example/ai-lyrics/issues"
+  },
+  "homepage": "https://github.com/example/ai-lyrics#readme"
+}
