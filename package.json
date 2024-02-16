@@ -3,6 +3,7 @@
   "description": "A JavaScript library that allows you to fetch song lyrics by title or title and artist name.",
   "author": "KHAOUITI ABDELHAKIM",
   "license": "MIT",
+   "version": "1.0.0",
   "main": "index.js",
   "dependencies": {
     "html-to-text": "^9.0.5",
