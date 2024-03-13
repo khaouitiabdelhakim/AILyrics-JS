@@ -2,7 +2,7 @@
   "name": "ai-lyrics",
   "description": "A JavaScript library that allows you to fetch song lyrics by title or title and artist name. It is a great library",
   "author": "KHAOUITI ABDELHAKIM",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "license": "MIT",
   "main": "index.js",
   "dependencies": {

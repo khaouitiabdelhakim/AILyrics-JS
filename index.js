@@ -9,7 +9,7 @@
  * Copyright:
  * Copyright (c) [Year], KHAOUITI ABDELHAKIM
  * 
- * Date: [Date]
+ * Last Date: 13 March 2024
  */
 
 const puppeteer = require('puppeteer');
@@ -56,9 +56,11 @@ const LyricsAI = {
         if (lyricsElement) {
             const lyrics = await lyricsElement.evaluate(element => element.innerHTML); // Return HTML content instead of text content
             await browser.close();
-            return htmlToText(lyrics, {
+            var text = htmlToText(lyrics, {
                 wordwrap: 130
             });
+            text = text.replace(/"/g, ''); // Replace all occurrences of double quotes with an empty string
+            return text;
         }
 
         const links = await this.links(info);
@@ -77,15 +79,19 @@ const LyricsAI = {
                             divWithMostBr = divElement.innerHTML;
                         }
                     }
-                    return htmlToText(divWithMostBr, {
+                    var text = htmlToText(divWithMostBr, {
                         wordwrap: 130
                     });
+                    text = text.replace(/"/g, ''); // Replace all occurrences of double quotes with an empty string
+                    return text;
                 });
                 if (divWithMostBr) {
                     await browser.close();
-                    return htmlToText(divWithMostBr, {
+                    var text = htmlToText(divWithMostBr, {
                         wordwrap: 130
                     });
+                    text = text.replace(/"/g, ''); // Replace all occurrences of double quotes with an empty string
+                    return text;
                 }
             } catch (error) {
                 console.error(error);
