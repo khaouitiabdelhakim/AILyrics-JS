@@ -2,7 +2,7 @@
   "name": "ai-lyrics",
   "description": "A JavaScript library that allows you to fetch song lyrics by title or title and artist name. It is a great library",
   "author": "KHAOUITI ABDELHAKIM",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "license": "MIT",
   "main": "index.js",
   "dependencies": {
@@ -17,8 +17,30 @@
     "lyrics",
     "music",
     "fetch",
+    "ai",
+    "song",
     "songs",
-    "javascript"
+    "lyric",
+    "lyrics-fetcher",
+    "lyrics-finder",
+    "lyrics-scraper",
+    "lyrics-search",
+    "lyrics-searcher",
+    "lyrics-songs",
+    "lyrics-songs-fetcher",
+    "lyrics-songs-finder",
+    "lyrics-songs-scraper",
+    "lyrics-songs-search",
+    "lyrics-songs-searcher",
+    "lyrics-songs-songs",
+    "lyrics-songs-songs-fetcher",
+    "lyrics-songs-songs-finder",
+    "lyrics-songs-songs-scraper",
+    "lyrics-songs-songs-search",
+    "lyrics-songs-songs-searcher",
+    "lyrics-songs-songs-songs",
+    "lyrics-songs-songs-songs-fetcher"
+
   ],
   "engines": {
     "node": ">=12.0.0"
