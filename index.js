@@ -26,7 +26,7 @@ const LyricsAI = {
      * @param {string} title - The title of the song.
      * @returns {Promise<string>} - The lyrics of the song.
      */
-    findLyricsBySongTitle: async function(title) {
+    findLyricsBySongTitle: async function (title) {
         return this.find(title);
     },
 
@@ -36,7 +36,7 @@ const LyricsAI = {
      * @param {string} artist - The artist of the song.
      * @returns {Promise<string>} - The lyrics of the song.
      */
-    findLyricsBySongTitleAndArtist: async function(title, artist) {
+    findLyricsBySongTitleAndArtist: async function (title, artist) {
         return this.find(`${title} ${artist}`);
     },
 
@@ -45,61 +45,70 @@ const LyricsAI = {
      * @param {string} info - The information to search for.
      * @returns {Promise<string>} - The lyrics found.
      */
-    find: async function(info) {
-        const browser = await puppeteer.launch({ headless: "new" }); // Specify Headless mode as "new"
-        const page = await browser.newPage();
+    find: async function (info) {
+        try {
+            const browser = await puppeteer.launch({ headless: "new" }); // Specify Headless mode as "new"
+            const page = await browser.newPage();
 
-        const myUrl = `https://www.google.com/search?q=${encodeURIComponent(`${info} lyrics`)}`;
-        await page.goto(myUrl);
+            const myUrl = `https://www.google.com/search?q=${encodeURIComponent(`${info} lyrics`)}`;
+            await page.goto(myUrl);
 
-        const lyricsElement = await page.$('div[jsname="WbKHeb"]');
-        if (lyricsElement) {
-            const lyrics = await lyricsElement.evaluate(element => element.innerHTML); // Return HTML content instead of text content
-            await browser.close();
-            var text = htmlToText(lyrics, {
-                wordwrap: 130
-            });
-            text = text.replace(/"/g, ''); // Replace all occurrences of double quotes with an empty string
-            return text;
-        }
-
-        const links = await this.links(info);
-
-        for (const link of links) {
-            try {
-                await page.goto(link);
-                const divWithMostBr = await page.evaluate(() => {
-                    const divElements = Array.from(document.querySelectorAll('*:not(:has(div))'));
-                    let divWithMostBr = null;
-                    let maxBrCount = 0;
-                    for (const divElement of divElements) {
-                        const brCount = divElement.querySelectorAll('br').length;
-                        if (brCount >= maxBrCount && divElement.textContent.length > 600) {
-                            maxBrCount = brCount;
-                            divWithMostBr = divElement.innerHTML;
-                        }
-                    }
-                    var text = htmlToText(divWithMostBr, {
-                        wordwrap: 130
-                    });
-                    text = text.replace(/"/g, ''); // Replace all occurrences of double quotes with an empty string
-                    return text;
+            const lyricsElement = await page.$('div[jsname="WbKHeb"]');
+            if (lyricsElement) {
+                const lyrics = await lyricsElement.evaluate(element => element.innerHTML); // Return HTML content instead of text content
+                await browser.close();
+                var text = htmlToText(lyrics, {
+                    wordwrap: 130
                 });
-                if (divWithMostBr) {
-                    await browser.close();
-                    var text = htmlToText(divWithMostBr, {
-                        wordwrap: 130
-                    });
-                    text = text.replace(/"/g, ''); // Replace all occurrences of double quotes with an empty string
-                    return text;
-                }
-            } catch (error) {
-                console.error(error);
+                text = text.replace(/"/g, ''); // Replace all occurrences of double quotes with an empty string
+                return text;
             }
-        }
 
-        await browser.close();
-        return '';
+            const links = await this.links(info);
+
+            for (const link of links) {
+                try {
+                    await page.goto(link);
+                    const divWithMostBr = await page.evaluate(() => {
+                        const divElements = Array.from(document.querySelectorAll('*:not(:has(div))'));
+                        let divWithMostBr = null;
+                        let maxBrCount = 0;
+                        for (const divElement of divElements) {
+                            const brCount = divElement.querySelectorAll('br').length;
+                            if (brCount >= maxBrCount && divElement.textContent.length > 600) {
+                                maxBrCount = brCount;
+                                divWithMostBr = divElement.innerHTML;
+                            }
+                        }
+                        var text = htmlToText(divWithMostBr, {
+                            wordwrap: 130
+                        });
+                        text = text.replace(/"/g, ''); // Replace all occurrences of double quotes with an empty string
+                        return text;
+                    });
+
+                    if (!lyricsElement && !divWithMostBr) {
+                        throw new Error(`No lyrics found for ${info}`);
+                    }
+
+                    if (divWithMostBr) {
+                        await browser.close();
+                        var text = htmlToText(divWithMostBr, {
+                            wordwrap: 130
+                        });
+                        text = text.replace(/"/g, ''); // Replace all occurrences of double quotes with an empty string
+                        return text;
+                    }
+                } catch (error) {
+                    throw new Error(error)
+                }
+            }
+
+            await browser.close();
+            return '';
+        } catch (error) {
+            throw new Error(error)
+        }
     },
 
     /**
@@ -107,7 +116,7 @@ const LyricsAI = {
      * @param {string} info - The information to search for.
      * @returns {Promise<string[]>} - Array of links.
      */
-    links: async function(info) {
+    links: async function (info) {
         const browser = await puppeteer.launch({ headless: "new" });
         const page = await browser.newPage();
 
@@ -129,7 +138,7 @@ const LyricsAI = {
      * @param {string[]} list - Array of links.
      * @returns {string[]} - Array of unique links.
      */
-    removeDuplicates: function(list) {
+    removeDuplicates: function (list) {
         return [...new Set(list)];
     },
 };
